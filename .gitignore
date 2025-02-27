@@ -35,3 +35,11 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
+
+# Python cache
+__pycache__/
+
+# Output and data files
+*.txt
+*.dat
+*.data
