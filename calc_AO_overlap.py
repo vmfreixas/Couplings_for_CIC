@@ -14,14 +14,14 @@ def read_xyz(xyzFile):
 		atoms.append((symbol, coords))
 	return atoms
 
-def calc_AO_overlap(xyzFile1, xyzFile2):
+def calc_AO_overlap(xyzFile1, xyzFile2, basis):
 	#Reading the first xyz file:
 	mol1 = read_xyz(xyzFile1)
 	mol2 = read_xyz(xyzFile2)
 	mol12 = mol1 + mol2
 	mol12_pyscf = gto.Mole()
 	mol12_pyscf.atom = mol12
-	mol12_pyscf.basis = 'cc-pVDZ'
+	mol12_pyscf.basis = basis
 	mol12_pyscf.build()
 	ao = mol12_pyscf.intor('int1e_ovlp')
 	nOrb = int(mol12_pyscf.nao / 2)
