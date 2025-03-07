@@ -2,7 +2,7 @@
 
 import numpy as np
 
-def getMO_matrix_closed_shell(FileName, Nbf):
+def get_MO_matrix_closed_shell(FileName, Nbf):
 	MO_matrix = np.zeros((Nbf, Nbf), dtype = float)
 	with open(FileName, 'r') as moldenFile:
 		read = False

@@ -1,6 +1,6 @@
 import numpy as np
 
-def getCIC_vector(fileName, root):
+def get_CIC_vector(fileName, root):
 	cic = []
 	with open(fileName, 'r') as nwFile:
 		readRoot = False
