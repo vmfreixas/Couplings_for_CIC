@@ -32,7 +32,7 @@ def get_AO_overlap_from_NWChem(fileName):
                         break
                 if i == Nbf - 1:
                     i = -4
-            if "global array: Temp HCore" in line:
+            if "global array: Temp Over" in line:
                 AO_block = True
                 Nbf = int(line.split(':')[2].split(',')[0])
                 ao = np.zeros((Nbf, Nbf), dtype = float)

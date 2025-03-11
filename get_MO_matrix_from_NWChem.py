@@ -3,7 +3,7 @@
 
 import numpy as np
 
-def get_MO_matrix_from_NWChem_from_molden(fileName, channel = 'alpha'):
+def get_MO_matrix_from_NWChem(fileName, channel = 'alpha'):
     with open(fileName, 'r') as nwFile:
         alpha = False
         beta = False
